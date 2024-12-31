@@ -92,4 +92,3 @@ export default function TopicPage({ params }: TopicPageProps) {
     </div>
   );
 }
-
