@@ -48,8 +48,7 @@ export default function HotTopicsSection() {
         <div className="md:w-1/5 w-full text-center md:text-left">
           <h2 className="text-2xl md:text-3xl font-bold">Hot Topics</h2>
           <p className="text-gray-400 mt-2 text-sm md:text-base">
-            Don't miss out on the latest news about Travel tips, Hotels review,
-            Food guide...
+            Explore the latest insights, tips, and expert guides on technology, innovation, and problem-solving strategies.
           </p>
           <div className="flex justify-center md:justify-start items-center space-x-3 mt-6">
             <button
@@ -61,7 +60,7 @@ export default function HotTopicsSection() {
               } transition duration-300`}
               disabled={currentIndex === 0}
             >
-              <span className="text-lg md:text-xl">←</span>
+              <span className="text-lg md:text-xl">&#8592;</span>
             </button>
             <button
               onClick={handleNext}
@@ -72,7 +71,7 @@ export default function HotTopicsSection() {
               } transition duration-300`}
               disabled={currentIndex >= cards.length - cardsPerView}
             >
-              <span className="text-lg md:text-xl">→</span>
+              <span className="text-lg md:text-xl">&#8594;</span>
             </button>
           </div>
         </div>
