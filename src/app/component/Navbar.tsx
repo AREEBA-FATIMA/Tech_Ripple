@@ -36,7 +36,7 @@ export default function Navbar() {
         {/* Left side: Links */}
         <div className="flex space-x-12">
           <div className="text-center text-white cursor-pointer hover:text-indigo-400">
-            <Link href={"/popular"}>
+            <Link href={"/blog/technical-tutorials"}>
               <div className="text-sm font-semibold pb-2 border-b border-white inline-block">
                 POPULAR
               </div>
@@ -65,7 +65,7 @@ export default function Navbar() {
         {/* Right side: Links */}
         <div className="flex space-x-12">
           <div className="text-center text-white cursor-pointer hover:text-indigo-400">
-            <Link href={"/recent"}>
+            <Link href={"/blog/problem-solving"}>
               <div className="text-sm font-semibold pb-2 border-b border-white inline-block">
                 RECENT
               </div>
