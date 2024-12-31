@@ -46,10 +46,10 @@ export default function TopicPage({ params }: TopicPageProps) {
     "case-studies": {
       title: "Case Studies",
       blogs: [
-        { id: "blog-1", title: "Tesla’s Innovation in EV", img: "/images/cs-1.png" },
-        { id: "blog-2", title: "Apple’s UX Strategy", img: "/images/cs-2.png" },
-        { id: "blog-3", title: "Netflix's Recommendation Engine", img: "/images/cs-3.png" },
-        { id: "blog-4", title: "SpaceX Reusable Rockets", img: "/images/cs-4.png" },
+        { id: "blog-1", title: "Tesla&#39;s Innovation in EV", img: "/images/cs-1.png" },
+        { id: "blog-2", title: "Apple&#39;s UX Strategy", img: "/images/cs-2.png" },
+        { id: "blog-3", title: "Netflix&#39;s Recommendation Engine", img: "/images/cs-3.png" },
+        { id: "blog-4", title: "SpaceX&#39;s Reusable Rockets", img: "/images/cs-4.png" },
       ],
     },
     "problem-solving": {
@@ -92,3 +92,4 @@ export default function TopicPage({ params }: TopicPageProps) {
     </div>
   );
 }
+
