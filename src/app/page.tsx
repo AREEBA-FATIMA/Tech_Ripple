@@ -3,6 +3,7 @@
 import Head from "next/head";
 import HotTopicsSection from "./topics/page";
 import Navbar from "./component/Navbar";
+import Footer from "./component/Footer";
 
 export default function Home() {
   return (
@@ -49,6 +50,7 @@ export default function Home() {
       <div id="category">
         <HotTopicsSection />
       </div>
+      <Footer />
     </div>
   );
 }
