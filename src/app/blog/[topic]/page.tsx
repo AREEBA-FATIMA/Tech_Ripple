@@ -8,13 +8,14 @@ interface BlogData {
 }
 
 interface TopicPageProps {
-  params: {
+  params: Promise<{
     topic: string;
-  };
+  }>;
 }
 
-// Ensure this function is marked async to resolve params if needed
 export default async function TopicPage({ params }: TopicPageProps) {
+  const resolvedParams = await params;
+
   const blogData: BlogData = {
     "technical-tutorials": {
       title: "Technical Tutorials",
@@ -47,10 +48,10 @@ export default async function TopicPage({ params }: TopicPageProps) {
     "case-studies": {
       title: "Case Studies",
       blogs: [
-        { id: "blog-1", title: "Tesla's Innovation in EV", img: "/images/cs-1.png" },
-        { id: "blog-2", title: "Apple's UX Strategy", img: "/images/cs-2.png" },
-        { id: "blog-3", title: "Netflix's Recommendation Engine", img: "/images/cs-3.png" },
-        { id: "blog-4", title: "SpaceX's Reusable Rockets", img: "/images/cs-4.png" },
+        { id: "blog-1", title: "Tesla&apos;s Innovation in EV", img: "/images/cs-1.png" },
+        { id: "blog-2", title: "Apple&apos;s UX Strategy", img: "/images/cs-2.png" },
+        { id: "blog-3", title: "Netflix&apos;s Recommendation Engine", img: "/images/cs-3.png" },
+        { id: "blog-4", title: "SpaceX&apos;s Reusable Rockets", img: "/images/cs-4.png" },
       ],
     },
     "problem-solving": {
@@ -63,7 +64,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
     },
   };
 
-  const topic = blogData[params.topic];
+  const topic = blogData[resolvedParams.topic];
 
   if (!topic) {
     return <p>Topic not found.</p>;
@@ -76,7 +77,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
         {topic.blogs.map((blog) => (
           <Link
             key={blog.id}
-            href={`/blog/${params.topic}/${blog.id}`}
+            href={`/blog/${resolvedParams.topic}/${blog.id}`}
             className="block bg-white shadow-sm shadow-indigo-200 rounded-lg overflow-hidden transition-transform transform hover:scale-105"
           >
             <img
