@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Head from "next/head";
 import HotTopicsSection from "./topics/page";
 import Navbar from "./component/Navbar";
