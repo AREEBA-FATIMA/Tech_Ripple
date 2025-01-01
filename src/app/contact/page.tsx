@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation"; // Correct import for useRouter
 import emailjs from "emailjs-com";
 
 export default function Contact() {
@@ -9,6 +10,8 @@ export default function Contact() {
     email: "",
     message: "",
   });
+
+  const router = useRouter(); // Initialize useRouter
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -29,7 +32,7 @@ export default function Contact() {
         "2-ffOv2-Xbt1BVHtX" // Public key
       )
       .then(
-        () => { // Removed 'response'
+        () => {
           alert("Message sent successfully!");
           setFormData({ name: "", email: "", message: "" }); // Clear the form
         },
@@ -43,7 +46,26 @@ export default function Contact() {
   return (
     <div className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-10">
-        <h1 className="text-3xl font-semibold text-center mb-8">Contact Us</h1>
+        {/* Header Section */}
+        <div className="relative mb-8">
+          <button
+            onClick={() => router.back()}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white flex items-center space-x-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+\            </svg>
+            <span className="text-sm hidden lg:block">Back</span>
+          </button>
+          <h1 className="text-3xl font-semibold text-center">Contact Us</h1>
+        </div>
 
         <div className="lg:flex lg:space-x-40 mb-12">
           {/* Left Section: Contact Details */}
