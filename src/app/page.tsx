@@ -6,24 +6,6 @@ import HotTopicsSection from "./topics/page";
 import Navbar from "./component/Navbar";
 
 export default function Home() {
-  const [navBg, setNavBg] = useState("bg-transparent");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setNavBg("bg-gray-800 shadow-md");
-      } else {
-        setNavBg("bg-transparent");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <div className="relative">
       {/* Background Video */}
@@ -65,9 +47,9 @@ export default function Home() {
         </div>
       </main>
 
-    <div id="category">
-    <HotTopicsSection />
-    </div>
+      <div id="category">
+        <HotTopicsSection />
+      </div>
     </div>
   );
 }

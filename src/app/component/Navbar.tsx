@@ -108,7 +108,7 @@ export default function Navbar() {
       {/* Dropdown Menu for Small and Medium Screens */}
       {isMenuOpen && (
         <div className="absolute top-16 right-4 bg-gray-800 text-white rounded-lg shadow-lg py-4 w-48 z-10">
-          <Link href={"/popular"}>
+          <Link href={"/blog/technical-tutorials"}>
             <div className="px-4 py-2 hover:bg-gray-700 cursor-pointer">
               POPULAR POSTS
             </div>
@@ -116,7 +116,7 @@ export default function Navbar() {
           <a href="#category" className="block px-4 py-2 hover:bg-gray-700">
             CATEGORIES OF BLOGS
           </a>
-          <Link href={"/recent"}>
+          <Link href={"/blog/problem-solving"}>
             <div className="px-4 py-2 hover:bg-gray-700 cursor-pointer">
               RECENT BLOGS
             </div>
