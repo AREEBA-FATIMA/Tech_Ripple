@@ -58,7 +58,7 @@ export default function Navbar() {
           <img
             src="/images/logo.png"
             alt="Tech Ripple Logo"
-            className="w-full h-full object-contain"
+            className="w-full h-full object-cover"
           />
         </div>
 
@@ -90,7 +90,7 @@ export default function Navbar() {
           <Image
             src="/images/logo.png"
             alt="Tech Ripple Logo"
-            className="w-full h-full object-contain"
+            className="w-full h-full object-cover"
             width= {64}
             height = { 64}
           />
