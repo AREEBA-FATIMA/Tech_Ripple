@@ -13,7 +13,8 @@ interface TopicPageProps {
   };
 }
 
-export default function TopicPage({ params }: TopicPageProps) {
+// Ensure this function is marked async to resolve params if needed
+export default async function TopicPage({ params }: TopicPageProps) {
   const blogData: BlogData = {
     "technical-tutorials": {
       title: "Technical Tutorials",
