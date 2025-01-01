@@ -33,10 +33,10 @@ export default function Home() {
       {/* Body Content */}
       <main className="flex items-center justify-center min-h-screen text-center text-white z-10 relative">
         <div className="space-y-8">
-          <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-indigo-600">
+          <h1 className="text-4xl p-4 lg:p-0 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-indigo-600">
             Welcome to Tech Ripple
           </h1>
-          <p className="text-lg max-w-2xl mx-auto">
+          <p className="text-lg p-4 lg:p-0 max-w-2xl mx-auto">
             Discover insightful articles on technology, creativity, and more.
             Our blog is dedicated to providing the latest trends, tips, and deep
             dives into exciting topics.
