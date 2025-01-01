@@ -29,7 +29,7 @@ export default function Contact() {
         "2-ffOv2-Xbt1BVHtX" // Public key
       )
       .then(
-        (response) => {
+        () => { // Removed 'response'
           alert("Message sent successfully!");
           setFormData({ name: "", email: "", message: "" }); // Clear the form
         },
