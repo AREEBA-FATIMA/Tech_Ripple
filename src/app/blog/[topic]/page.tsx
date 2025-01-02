@@ -48,10 +48,10 @@ export default async function TopicPage({ params }: TopicPageProps) {
     "case-studies": {
       title: "Case Studies",
       blogs: [
-        { id: "blog-1", title: "Tesla&apos;s Innovation in EV", img: "/images/cs-1.png" },
-        { id: "blog-2", title: "Apple&apos;s UX Strategy", img: "/images/cs-2.png" },
-        { id: "blog-3", title: "Netflix&apos;s Recommendation Engine", img: "/images/cs-3.png" },
-        { id: "blog-4", title: "SpaceX&apos;s Reusable Rockets", img: "/images/cs-4.png" },
+        { id: "blog-1", title: "Tesla's Innovation in EV", img: "/images/cs-1.png" },
+        { id: "blog-2", title: "Apple's UX Strategy", img: "/images/cs-2.png" },
+        { id: "blog-3", title: "Netflix's Recommendation Engine", img: "/images/cs-3.png" },
+        { id: "blog-4", title: "SpaceX's Reusable Rockets", img: "/images/cs-4.png" },
       ],
     },
     "problem-solving": {
